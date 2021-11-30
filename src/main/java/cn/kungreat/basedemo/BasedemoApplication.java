@@ -1,5 +1,7 @@
 package cn.kungreat.basedemo;
 
+import cn.kungreat.basedemo.annotation.EnablePermission;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +12,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
+@MapperScan(basePackages = "cn.kungreat.basedemo.mapper")
+@EnablePermission(name = "kungreat")
 public class BasedemoApplication {
 
 	public static void main(String[] args) {

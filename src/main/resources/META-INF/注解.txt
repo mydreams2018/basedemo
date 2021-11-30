@@ -1,3 +1,4 @@
+@ComponentScan  扫描
 @ConditionalOnBean(仅仅在当前上下文中存在某个对象时,才会实例化一个Bean)
 @ConditionalOnClass(某个class位于类路径上,才会实例化一个Bean),该注解的参数对应的类必须存在,否则不解析该注解修饰的配置类
 @ConditionalOnExpression(当表达式为true的时候,才会实例化一个Bean)
@@ -6,8 +7,8 @@
 @ConditionalOnNotWebApplication(不是web应用)
 @ConditionalOnProperty是指在application.yml里配置的属性是否为true,其他的几个都是对class的判断
 
-@AutoConfigureAfter 在加载配置的类之后再加载当前类
-@import  时必须要让这个类先被spring ioc 加载好
-
-
+@AutoConfigureAfter 在加载配置的类之后再加载当前类 必须要让这个类先被spring ioc 加载好
+@Import 导入一个或多个其它类
+@ImportResource  历史原因导入旧的xml配置
+@Profile("dev") 指定使用环境配合配置文件使用 application-dev.yml
 @Configuration(proxyBeanMethods = false)    不受spring生命周期管理 每次使用都会创新的对象.lite简化模式
