@@ -24,11 +24,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+<!--	别人引用我们的包		-->
+<!--	当别的模块依赖我们的包时,忽略掉此依赖 发布为中间件时注意. 不然可能造成JAR依赖版本的选择冲突  -->
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<optional>true</optional>
 		</dependency>
+
+<!-- 当我们的服务必需要依赖一个包时 而这个包别人在引用时又不会引进来的 默认方式 把这个依赖传下去-->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -43,6 +49,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 

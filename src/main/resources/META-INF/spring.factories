@@ -1,0 +1,3 @@
+# Auto Configuration Import Listeners
+org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\
+cn.kungreat.pg.MyAutoConfigurationImportListener

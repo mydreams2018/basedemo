@@ -12,3 +12,5 @@
 @ImportResource  历史原因导入旧的xml配置
 @Profile("dev") 指定使用环境配合配置文件使用 application-dev.yml
 @Configuration(proxyBeanMethods = false)    不受spring生命周期管理 每次使用都会创新的对象.lite简化模式
+
+@EnableConfigurationProperties(MybatisProperties.class)参考

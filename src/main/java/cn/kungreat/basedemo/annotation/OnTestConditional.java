@@ -19,7 +19,7 @@ public class OnTestConditional implements Condition {
             MergedAnnotations annotations = metadata.getAnnotations();
             MergedAnnotation<ConditionalOnTest> conditionalOnTestMergedAnnotation = annotations.get(ConditionalOnTest.class);
             String beaname = conditionalOnTestMergedAnnotation.getString("beaname");
-            //可能会进来多次 只有不存在时才去处理
+            //可能会进来多次 只有不存在时才去处理  多次也不影响会自动的处理只注入一个对象
             boolean exist = context.getBeanFactory().containsBean(beaname);
             if(!exist){
                 Environment environment = context.getEnvironment();
