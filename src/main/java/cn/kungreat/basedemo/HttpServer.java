@@ -12,9 +12,11 @@ public class HttpServer {
     private AnnoTestBean annoTestBean;
     @Autowired
     private AnnoTestBeanPackage annoTestBeanPackage;
+    @Autowired
+    private ConditionTestBean conditionTestBean;
 
     @RequestMapping(value = "/base")
     public String hello(){
-         return annoTestBean.getSay()+annoTestBeanPackage.getSayPg();
+         return annoTestBean.getSay()+annoTestBeanPackage.getSayPg()+conditionTestBean.getSayCondition();
     }
 }
