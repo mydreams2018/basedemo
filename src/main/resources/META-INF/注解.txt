@@ -14,3 +14,5 @@
 @Configuration(proxyBeanMethods = false)    不受spring生命周期管理 每次使用都会创新的对象.lite简化模式
 
 @EnableConfigurationProperties(MybatisProperties.class)参考
+@ConditionalOnProperty(prefix="my",name="server",havingValue="prod",matchIfMissing=true)
+当条件my.server=prod 时成立  或者 my.server 不存在时也成立
