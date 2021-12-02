@@ -16,3 +16,5 @@
 @EnableConfigurationProperties(MybatisProperties.class)参考
 @ConditionalOnProperty(prefix="my",name="server",havingValue="prod",matchIfMissing=true)
 当条件my.server=prod 时成立  或者 my.server 不存在时也成立
+
+@ConditionalOnResource

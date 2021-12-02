@@ -4,6 +4,7 @@ import cn.kungreat.basedemo.annotation.EnablePermission;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.context.WebServerApplicationContext;
@@ -17,7 +18,9 @@ import org.springframework.context.event.EventListener;
 public class BasedemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BasedemoApplication.class, args);
+		SpringApplication springApplication = new SpringApplication(BasedemoApplication.class);
+		springApplication.setBannerMode(Banner.Mode.OFF);
+		springApplication.run(args);
 		System.out.println("main-finish");
 	}
 
