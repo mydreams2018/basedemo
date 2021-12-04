@@ -35,10 +35,10 @@ public class BasedemoApplication {
 			}
 		};
 	}
-
+	//spring 来帮助完成事件触发后的通知.
 	@EventListener(WebServerInitializedEvent.class)
 	public void onWebServerRead(WebServerInitializedEvent webServerInitializedEvent){
-		System.out.println(webServerInitializedEvent.getWebServer());
+		System.out.println("spring"+webServerInitializedEvent);
 	}
 
 }

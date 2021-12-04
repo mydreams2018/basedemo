@@ -8,7 +8,8 @@ public class MyListener implements ApplicationListener<ApplicationEvent> , Order
 
     @Override
     public void onApplicationEvent(ApplicationEvent event) {
-        System.out.println("event:"+event.getClass());
+        //事件触发.可根据自已的业务完成 事件通知处理.
+        System.out.println("event:"+event);
     }
 
     @Override
